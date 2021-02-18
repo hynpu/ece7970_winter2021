@@ -17,5 +17,6 @@ In paper, the author proposed a [transformer-based model](https://en.wikipedia.o
 # What to learn
 1. encoder
 
-+(https://d2l.ai/chapter_recurrent-modern/encoder-decoder.html)
++ https://d2l.ai/chapter_recurrent-modern/encoder-decoder.html
+
 2. actor-critic network
