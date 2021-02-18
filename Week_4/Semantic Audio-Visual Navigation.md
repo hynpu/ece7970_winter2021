@@ -8,7 +8,7 @@ In paper, the author proposed a [transformer-based model](https://en.wikipedia.o
 3. Policy network: here is the RL policy network. An encoder to accociate the information from the memory M, to see if there is any relation between these inputs: M_e. Then, a decoder network use the M_e, C_t, and L_t input to update the state repensentation s_t for each cell. Then the actor-critic network use the s_t to predict the action distribution and value of the state.
 
 
-(https://github.com/hynpu/ece7970_winter2021/blob/main/Week_4/Capture.JPG?raw=true)
+[illustration](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_4/Capture.JPG)
 
 # Spotlight
 1. How to train the goal descriptor network: generate ground truth first, including location and category from simulation, and train the network. The category prediction is is supervised and off-policy, and the location prediction is on-policy.
