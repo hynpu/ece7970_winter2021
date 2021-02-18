@@ -9,7 +9,7 @@ In paper, the author proposed a [transformer-based model](https://en.wikipedia.o
 
 # Spotlight
 1. How to train the goal descriptor network: generate ground truth first, including location and category from simulation, and train the network. The category prediction is is supervised and off-policy, and the location prediction is on-policy.
-2. To avoid sampling easy episodes, add requirements to the geodesic distance. *But how is geodesic distance used in this research?*
+2. To avoid sampling easy episodes, add requirements to the geodesic distance. **But how is geodesic distance used in this research?**
 
 # What to learn
 1. encoder
