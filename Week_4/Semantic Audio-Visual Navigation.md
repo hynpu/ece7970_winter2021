@@ -18,5 +18,6 @@ In paper, the author proposed a [transformer-based model](https://en.wikipedia.o
 1. encoder
 
 + https://d2l.ai/chapter_recurrent-modern/encoder-decoder.html
++ http://jalammar.github.io/illustrated-transformer/#:~:text=As%20we've%20mentioned%20already,through%20a%20self%2Dattention%20process.
 
 2. actor-critic network
