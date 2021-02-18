@@ -15,5 +15,5 @@ In paper, the author proposed a [transformer-based model](https://en.wikipedia.o
 2. To avoid sampling easy episodes, add requirements to the geodesic distance. **But how is geodesic distance used in this research?**
 
 # What to learn
-1. encoder *(https://d2l.ai/chapter_recurrent-modern/encoder-decoder.html)
+1. [encoder](https://d2l.ai/chapter_recurrent-modern/encoder-decoder.html)
 2. actor-critic network
