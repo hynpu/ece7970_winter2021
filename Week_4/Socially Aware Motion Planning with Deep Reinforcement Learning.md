@@ -9,6 +9,8 @@ Then it detailed introduced the states including observable and unobservable, ro
 Also, compared with giving the comprehensive definition of social norms, it will be easier to define what is not acceptable in social interaction. For this research problem, it will be a union of passing/overtaking/crossing uncomfortable zones.
 Also, details about training multiagent value network are also given: feed the robot & nearby agents' states to a neural network (rectified linear unit (ReLU)) , which will generate value funciton (need to confirm with Dr. Louie), and then the value fucntion will be compenstated with penalty rewards (unacceptable social norms, or say, uncomfortable zone).
 
+![figure_1](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_4/Figures/capture_1.png)
+
 # Spotlight
 Details about how to incorporate neural network with RL.
 
