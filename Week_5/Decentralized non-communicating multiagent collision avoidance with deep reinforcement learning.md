@@ -23,5 +23,5 @@ freezing robot problem: P. Trautman and A. Krause, “Unfreezing the robot: Navi
 
 The use of a filtered velocity addresses a subtle oscillation problem as discussed in [12]: J. Van den Berg, M. Lin, and D. Manocha, “Reciprocal velocity obstacles for real-time multi-agent navigation,” in Proceedings of the 2008 IEEE International Conference on Robotics and Automation (ICRA),
 
-Experience set in RL:
+Experience set in RL: it seems that the experience set is the state-value pair set.
 
