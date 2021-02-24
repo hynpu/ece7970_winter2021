@@ -25,4 +25,4 @@ The use of a filtered velocity addresses a subtle oscillation problem as discuss
 
 Experience set in RL: it seems that the experience set is the state-value pair set.
 
-[algo illustration](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_5/Figures/init_refine_algo.JPG)
+![algo illustration](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_5/Figures/init_refine_algo.JPG)
