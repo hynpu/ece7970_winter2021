@@ -15,14 +15,10 @@ For instance, we keep the past k steps of previous states, and use these states 
 # super() useage in class def
 ` 
 class FireResetEnv(gym.Wrapper):
-
     def __init__(self, env=None):
-    
         """For environments where the user need to press FIRE for the game to start."""
         super(FireResetEnv, self).__init__(env)
-        
         assert env.unwrapped.get_action_meanings()[1] == 'FIRE'
-        
         assert len(env.unwrapped.get_action_meanings()) >= 3
 ` 
 
