@@ -34,7 +34,7 @@ class Cube(Square):
 ```
 > In this example, you are setting Square as the subclass argument to super(), instead of Cube. This causes super() to start searching for a matching method (in this case, .area()) at one level above Square in the instance hierarchy, in this case Rectangle.
 > 
-# filter and kernel_size
+# Filter and kernel_size
 Filters are used to extract features from images in the process of convolution.
 
 filters: Integer, the dimensionality of the output space (i.e. the number of output filters in the convolution).
