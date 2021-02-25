@@ -7,6 +7,13 @@ To deal with this problem, **replay buffer** which stores past experience will b
 
 # Epsilon-greedy method
 
+# Correlation between subsequent steps
+For training, we randomly sample the batch of transitions from the replay buffer, which allows us to break the correlation between subsequent steps in the environment.
+
+Each time we do a step in the environment, we push the transition into the buffer, keeping only a fixed number of steps, and save the state related info as a tuple, to our buffer. The buffer is around 10k long. 
+
+The reason for this process is that we want to sample "randomly", but RL problem is not evenly distributed, which is not ideal for NN.
+
 # "Convert" POMDP to MDP
 The solution is maintaining several observations from the past and using them as a state. In the case of Atari games, we usually stack k subsequent frames together and use them as the observation at every state. 
 
