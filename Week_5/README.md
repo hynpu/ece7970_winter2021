@@ -32,7 +32,7 @@ class Cube(Square):
         face_area = super(Square, self).area()
         return face_area * self.length
 ```
-In this example, you are setting Square as the subclass argument to super(), instead of Cube. This causes super() to start searching for a matching method (in this case, .area()) at one level above Square in the instance hierarchy, in this case Rectangle.
+> In this example, you are setting Square as the subclass argument to super(), instead of Cube. This causes super() to start searching for a matching method (in this case, .area()) at one level above Square in the instance hierarchy, in this case Rectangle.
 
 # Other 
 Some tricks to fasten the learning rate: such as converting individual lives in the game into separate episodes, performing a random amount of no-op actions in the beginning of the game, making an action decision every K steps (repeating an action for 3-4 time until take the next new action), scaling down the frame, reconstruct the reward in the game...
