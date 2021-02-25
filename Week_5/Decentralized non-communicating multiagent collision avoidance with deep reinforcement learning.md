@@ -25,6 +25,6 @@ The use of a filtered velocity addresses a subtle oscillation problem as discuss
 
 Experience set in RL: it seems that the experience set is the state-value pair set.
 
-epsilion-greedy method: which just means switching between random and Q policy using the probability hyperparameter \eps
+epsilion-greedy method: which just means switching between random and Q policy using the probability hyperparameter \eps, The usual practice is to start with \eps= 1.0 (100% random actions) and slowly decrease it to some small value such as 5% or 2% of random actions. Using
 
 ![algo illustration](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_5/Figures/init_refine_algo.JPG)
