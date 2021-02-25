@@ -36,3 +36,15 @@ class Cube(Square):
 
 # Other 
 Some tricks to fasten the learning rate: such as converting individual lives in the game into separate episodes, performing a random amount of no-op actions in the beginning of the game, making an action decision every K steps (repeating an action for 3-4 time until take the next new action), scaling down the frame, reconstruct the reward in the game...
+
+``` 
+self.action_space = spaces.Box( np.array([-1,0,0]), np.array([+1,+1,+1]))  # steer, gas, brake
+``` 
+
+Box means that you are dealing with real valued quantities.
+
+The first array np.array([-1,0,0] are the lowest accepted values, and the second np.array([+1,+1,+1]) are the highest accepted values. In this case (using the comment) we see that we have 3 available actions:
+
+Steering: Real valued in [-1, 1]
+Gas: Real valued in [0, 1]
+Brake: Real valued in [0, 1]
