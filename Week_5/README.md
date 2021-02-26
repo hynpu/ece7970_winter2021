@@ -5,7 +5,10 @@ One of the fundamental requirements for SGD optimization is that the training da
 
 To deal with this problem, **replay buffer** which stores past experience will be the sampling pool.
 
-# Epsilon-greedy method
+# Epsilon-greedy method: exploit or explore
+In reinforcement learning, our restaurant choosing dilemma is known as the exploration-exploitation tradeoff. At what point should you exploit options which you think to be the best rather than exploring options which have the potential to be better or worse (or vice-versa)?
+
+Starting from 1, and decrease to a very small value as more simulation has been executed.
 
 # Correlation between subsequent steps
 For training, we randomly sample the batch of transitions from the replay buffer, which allows us to break the correlation between subsequent steps in the environment.
