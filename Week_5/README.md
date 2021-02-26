@@ -62,3 +62,7 @@ The first array np.array([-1,0,0] are the lowest accepted values, and the second
 Steering: Real valued in [-1, 1]
 Gas: Real valued in [0, 1]
 Brake: Real valued in [0, 1]
+
+# How to run a .py file on Colab
+
+https://stackoverflow.com/questions/51194303/how-to-run-a-python-script-in-a-py-file-from-a-google-colab-notebook
