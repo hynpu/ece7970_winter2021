@@ -66,3 +66,13 @@ Brake: Real valued in [0, 1]
 # How to run a .py file on Colab
 
 https://stackoverflow.com/questions/51194303/how-to-run-a-python-script-in-a-py-file-from-a-google-colab-notebook
+
+# How to prevent the Google Colab from disconnecting the running code
+
+``` 
+function ConnectButton(){
+    console.log("Connect pushed"); 
+    document.querySelector("#connect").click() 
+}
+``` 
+setInterval(ConnectButton,60000);
