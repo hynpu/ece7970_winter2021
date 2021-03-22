@@ -47,7 +47,7 @@ Embodiment mapping: from the recorded execution to the learner (robot), which me
 
 Both can be categorized by fully/partially observable
 
-![How to build the dataset](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_7/Figures/How%20to%20design%20the%20system.jpg)
+![How to build the dataset](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_7/Figures/build%20dataset.png)
 
 5. Limitation of demonstration 
 
