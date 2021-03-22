@@ -9,6 +9,8 @@ Argall, B. D., Chernova, S., Veloso, M., & Browning, B. (2009). A survey of robo
 
 # Abstract
 
+![what to consider when designing the sys](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_7/Figures/How%20to%20design%20the%20system.jpg)
+
 Design choices:
 
 1. Demonstration approach: 
@@ -44,6 +46,8 @@ Record mapping: from the teacher execution to recorded execution, which means if
 Embodiment mapping: from the recorded execution to the learner (robot), which means if/how to convert the dataset to robot knowledge (policy mapping)
 
 Both can be categorized by fully/partially observable
+
+![How to build the dataset](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_7/Figures/How%20to%20design%20the%20system.jpg)
 
 5. Limitation of demonstration 
 
