@@ -13,3 +13,5 @@ This function has a minimum when the probability distribution is uniform, so by 
 The policy network returns a probability distribution of actions, it is called the actor and tell the system what to implement;
 
 The value network return the as it allows us the value telling us how good our actions were.
+
+![](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_8/Figures/a2c.JPG)
