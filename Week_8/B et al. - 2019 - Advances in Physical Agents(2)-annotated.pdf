@@ -1,0 +1,21 @@
+# Citation
+Rodriguez, I., Manfré, A., Vella, F., Infantino, I., & Lazkano, E. (2019). Talking with Sentiment: Adaptive Expression Generation Behavior for Social Robots. Advances in Intelligent Systems and Computing, 855, 209–223. https://doi.org/10.1007/978-3-319-99885-5_15
+
+# Abstract
+In this paper, the author introduced the structure of a LfD robot from high level, including the Learning module, interaction model, and the execution monitoring module. 
+
+Learnign module: this topic address the concern how to learn the bingo game from a teacher (volunteers), including how can the teacher communicate with the robot (GUI/speech), how to model an interaction (activity simulator, including the robot model, user model, activity model, and trajectory), and the mapping function from state to behavior;
+
+Interaction module: based on the world state (environment), give a reasonable physicla behavior. This topic introduced how to identify the world states, and determine the behavior/action to deliver; also the persuasive stragety is included in this module, to better influence the attitudes and behaviors.
+
+Execution monitoring module: observe the robot's behavior/action, identify the behaviors which failed to be delivered, as well as analze the cause of the fault.
+
+Also, the author explained the performance evaluation method: the performance of the learning sub-system, by comparing the effectiveness of teaching (how many times, consistensy of different teachers), and the performance of the persuasion learning (the percentage of optimal persuasive strategy instances occurring during interactions with users).
+
+# Spotlight
+
+This paper provides a very high level structure of how the LfD robot is built, which gives me a clear structure of it.
+
+# What to learn 
+
+How to convert the teaching to the state-action mapping function? Through a ML? or other 
