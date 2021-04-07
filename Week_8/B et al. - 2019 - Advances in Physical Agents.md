@@ -16,6 +16,8 @@ To generate the gesticulation movement, there are mainly three steps:
 
 From the generated emotion, the robot will have the following gestures:　head tilt (upwards, downwards or straight), eye color  (blue for sad, or yellor for happy), and voice intonation (chaning the pitch and speed rate)
 
+![](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_8/Figures/GAN%20gesture.JPG)
+
 # Spotlight
 
 This paper has a pretty interesting topic, which uses the GAN to generate the robot emotion gesture. The research outcome can be used in our project, to better deal with the *persuasive stragety* mentioned in Dr. Louie's paper.
