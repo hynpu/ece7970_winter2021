@@ -6,6 +6,8 @@ This dissertation introduced the the PEPPER robot operating system (how to use i
 
 Moreover, it detailed introduced how to perform the experiment, from Day 1 to Day 3: how to train the robot, how to interact with children with ASD, and how to compare the results using System Usability Scale (SUS) and NASA Task Load Index (NASA-TLX).
 
+![image](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_9/Figures/build%20dataset.png)
+
 # Spotlight
 
 The Inverse Kinematics Model is very helpful for understanding the robot algorithm on Github.
