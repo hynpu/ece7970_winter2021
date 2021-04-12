@@ -78,6 +78,8 @@ The actor critic method is a good way to reduce the covarience.
 
 The policy network (which returns a probability distribution of actions) is called the actor, as it tells us what to do. Another network is called critic, as it allows us to understand how good our actions were.
 
+![image](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_9/Figures/a2c.JPG)
+
 
 # Asynchronous Advantage Actor-Critic
 
@@ -92,6 +94,10 @@ The most commonly used solution is gathering transitions using several parallel 
 3. Data parallelism
 
 Several trainings parallelly, and each of them communicating with one or more environments, and providing the cental algorithm with transitions (s, r, a, s'). All those samples are gathered together in one single training process, which calculates losses and performs an SGD update. Then, the updated neural network (NN) parameters need to be broadcast to all other processes to use in future environment communications.
+
+![image](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_9/Figures/data_para.JPG)
+
+![image](https://github.com/hynpu/ece7970_winter2021/blob/main/Week_9/Figures/grad_para.JPG)
 
 4. Gradients parallelism: 
 
