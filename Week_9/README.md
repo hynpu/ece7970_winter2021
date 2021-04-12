@@ -1,4 +1,11 @@
-# stochastic gradient descent (SGD)
+# stochastic gradient descent (SGD) in policy gradients
+
+Stochastic gradient descent (often abbreviated SGD) is an iterative method for optimizing an objective function with suitable smoothness properties (e.g. differentiable or subdifferentiable). It can be regarded as a stochastic approximation of gradient descent optimization, since it replaces the actual gradient (calculated from the entire data set) by an estimate thereof (calculated from a randomly selected subset of the data). Especially in high-dimensional optimization problems this reduces the computational burden, achieving faster iterations in trade for a lower convergence rate.
+
+The core of our Q-learning procedure is borrowed from supervised learning. One of the fundamental requirements for SGD optimization is that the training data is independent and identically distributed.
+
+However, the data from the DRL agent is alwasy highly correlated. How to diminish the correlated? Reply buffer.
+
 
 # why the replay buffer and sampling is not applicable in policy gradient methods?
 
@@ -10,12 +17,82 @@ In computer science, overhead is any combination of excess or indirect computati
 
 # unpack_batch in ptan
 
-# mutable-and-immutable
+```
+def unpack_batch(batch):
+    states, actions, rewards, dones, last_states = [], [], [], [], []
+    for exp in batch:
+        state = np.array(exp.state, copy=False)
+        states.append(state)
+        actions.append(exp.action)
+        rewards.append(exp.reward)
+        dones.append(exp.last_state is None)
+        if exp.last_state is None:
+            last_states.append(state)       # the result will be masked anyway
+        else:
+            last_states.append(np.array(exp.last_state, copy=False))
+    return np.array(states, copy=False), np.array(actions), np.array(rewards, dtype=np.float32), \
+           np.array(dones, dtype=np.uint8), np.array(last_states, copy=False)
+```
+
+# mutable and immutable in python
+
+Objects of built-in types like (int, float, bool, str, tuple, unicode) are immutable. Objects of built-in types like (list, set, dict) are mutable. Custom classes are generally mutable. To simulate immutability in a class, one should override attribute setting and deletion to raise exceptions.
+
+https://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference
+
+Arguments are passed by assignment. The rationale behind this is twofold:
+
+the parameter passed in is actually a reference to an object (but the reference is passed by value)
+some data types are mutable, but others aren't
+
+So:
+
+1. If you pass a mutable object into a method, the method gets a reference to that same object and you can mutate it to your heart's delight, but if you rebind the reference in the method, the outer scope will know nothing about it, and after you're done, the outer reference will still point at the original object.
+
+2. If you pass an immutable object to a method, you still can't rebind the outer reference, and you can't even mutate the object.
 
 # with in python
 
+with statement in Python is used in exception handling to make the code cleaner and much more readable. It simplifies the management of common resources like file streams. Observe the following code example on how the use of with statement makes code cleaner.
+
+How to suppor the "with" statement in user defined objects
+
+There is nothing special in open() which makes it usable with the with statement and the same functionality can be provided in user defined objects. Supporting with statement in your objects will ensure that you never leave any resource open.
+To use with statement in user defined objects you only need to add the methods __enter__() and __exit__() in the object methods. Consider the following example for further clarification.
+
 # pop_total_rewards what is this?
 
-# multiprocessing get() method
+Still a quesiton for ptan lib
 
-# why net.zero_grad()
+# Actor-Critic Method
+
+1. why we need to reduce the *variance* of the gradient?
+
+The main idea in policy gradient is to increase the probability of good actions and decrease the chance of bad ones. However, the discounted rewards is not an absolute value: for three actions Q1, Q2, Q3, by moving all of them towards certain direction, the policy gradient can be very different. So we need to have a way to standarize the policy gradients.
+
+2. Actor-critic
+
+Indeed, to decide on the suitability of a particular action in some state, we use the discounted total reward of the action. However, the total reward itself could be represented as a value of the state plus the advantage of the action: Q(s, a) = V(s) + A(s, a).
+
+The actor critic method is a good way to reduce the covarience.
+
+The policy network (which returns a probability distribution of actions) is called the actor, as it tells us what to do. Another network is called critic, as it allows us to understand how good our actions were.
+
+
+# Asynchronous Advantage Actor-Critic
+
+1. Why A3C? 
+
+We want to enlarge the replay buffer, but it is impossible in policy based RL (most of them are on-policy, which means that we have to train on samples generated by our current policy, so remembering old transitions will not be possible anymore)
+
+2. How to solve the replay buffer issue for policy gradient method?
+
+The most commonly used solution is gathering transitions using several parallel environments, and all of them exploiting the current policy.
+
+3. Data parallelism
+
+Several trainings parallelly, and each of them communicating with one or more environments, and providing the cental algorithm with transitions (s, r, a, s'). All those samples are gathered together in one single training process, which calculates losses and performs an SGD update. Then, the updated neural network (NN) parameters need to be broadcast to all other processes to use in future environment communications.
+
+4. Gradients parallelism: 
+
+Several processes calculating gradients on their own training samples. Then, all the gradients are sent to the cental algorithm to perform SGD. After this step, the updated NN weights will be synced to all parallel processes.

@@ -8,6 +8,6 @@ Moreover, it detailed introduced how to perform the experiment, from Day 1 to Da
 
 # Spotlight
 
-The Inverse Kinematics Model is very helpful for understanding the robot algorithm on Github
+The Inverse Kinematics Model is very helpful for understanding the robot algorithm on Github.
 
 # What to learn 
